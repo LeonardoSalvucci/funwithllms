@@ -42,3 +42,6 @@ ollama pull llama3.2
 # pnpm
 pnpm dev
 ```
+
+## Demo
+https://github.com/user-attachments/assets/efba5bc0-8ae1-49b5-b194-218e9edc486a

@@ -1,75 +1,44 @@
-# Nuxt Minimal Starter
+# Fun with LLMs
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**_Disclaimer:_** \
+This page was created as a playful proof of concept to bring together multiple ideas in one place. It's a minimal and intentionally simple full-stack LLM implementation — not meant to be production-ready or technically challenging, but rather to demonstrate how various concepts can be connected with ease.
+
+## Stack
+* NuxtJs
+* Ollama (llama3.2 model)
+* LangChain
+* Docker compose
 
 ## Setup
 
-Make sure to install dependencies:
-
+The repo has a docker compose file and you can setup everything on your local with just running
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+# with -d if you want to run services in background
+docker compose up 
 ```
+The ollama service will pull llama3.2 model so you has to be sure it was completely up to test the app
+
+Navigate to http://localhost:3000 and have fun!
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+1. Make sure to install dependencies:
 
 ```bash
-# npm
-npm run dev
+# pnpm
+pnpm install
+```
 
+2. Download and install [ollama](https://ollama.com/) and pull llama3.2 image
+```bash
+ollama pull llama3.2
+```
+
+3. Copy `.env.example` file and create a new `.env` with its content
+
+4. Start the development server on `http://localhost:3000`:
+
+```bash
 # pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

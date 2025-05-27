@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./deploy/frontend/Dockerfile
+    ports:
+      - "3000:3000"
+  
+  ollama:
+    build:
+      context: .
+      dockerfile: ./deploy/ollama/Dockerfile
